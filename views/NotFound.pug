@@ -1,0 +1,15 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title 404
+    style
+      include ../public/css/NotFound.css
+
+  body
+    section
+      video(src='/static/others/smoke.mp4',muted="", loop="", autoplay="")
+      h1.head.center.digit 404
+      h1.head.center.dis page not founded
+      h2.head.center.text it look like you are lost
+      a#btn.btn(href='/') Back TO home page

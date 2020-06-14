@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 425px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .head {
+    position: relative;
+    top: -100px;
+    color: honeydew;
+    text-align: center;
+    font-size: 7em;
+    mix-blend-mode: overlay;
+    /* text-shadow: ; */
+    text-shadow: 0 0 30px blue;
+}
+
+section .digit {
+    font-size: 9em;
+    color: #9b59b6;
+}
+
+section .text {
+    font-size: 3em;
+    font-family: "Righteous", cursive;
+    color: whitesmoke;
+}
+
+section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#btn {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-radius: 34px;
+    background-color: rgba(0, 0, 255, 0.57);
+    color: white;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+#btn:hover,
+#btn:valid {
+    background-color: rgba(0, 0, 255, 1);
+    transform: scale(1.3);
+    text-decoration: underline;
+    font-size: 2em;
+}

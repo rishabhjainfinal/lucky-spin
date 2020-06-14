@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  script(src='https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js')
+  title login
+  style
+    include ../public/css/login.css
+  
+h1.heading Login Form
+form#form.form(action='/' method='POST' )
+  //- <!-- value given in js -->
+  //- <!-- <input type="hidden" name='id'> -->
+  input#id(type='hidden' name='id')
+  label(for='name' ) name
+  input#name(type='text' name='name' required='')
+  label(for='age') age
+  input#age(type='number' name='age' required='')
+  label(for='mobile')
+    | mobile  
+    span *
+  input#mobile(type='tel' name='mobile')
+  label(for='address')
+    | address    
+    span *
+  input#address(type='text' name='address')
+  div
+    button#reset(type='reset') reset
+    button#submit(type='submit') submit
+
+
+script
+    include ../public/js/login.js

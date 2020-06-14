@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Handlee', cursive;
+    outline: none;
+    /* overflow: scroll; */
+}
+
+body {
+    background: linear-gradient(#2980b9, transparent, #8e44ad, #3498db, #1abc9c, #bdc3c7, #2980b9, #c233ff, #3498db, #83c1eb, #c887e4) no-repeat center center;
+    background-size: cover;
+    height: 180vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+@media (max-width:425px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+h1.heading {
+    font-size: 3em;
+    margin-top: 0.21em;
+}
+
+form {
+    width: 85%;
+    height: 85%;
+    border-top: 2px solid black;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 1em;
+}
+
+label {
+    font-size: 1.9em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.774);
+    margin-top: 1em;
+    text-shadow: 0 0 1em wheat;
+    position: relative;
+    top: -10px;
+}
+
+input {
+    width: 85%;
+    border-radius: 1em;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+    padding: 0.35em;
+    text-align: center;
+    box-shadow: 0em 0 1em white;
+    transition: .5s;
+}
+
+label span {
+    color: red;
+}
+
+input:hover,
+input:active {
+    position: relative;
+    width: 98%;
+    box-shadow: 0em 0 2em white;
+}
+
+form div {
+    width: 97%;
+    margin-top: 0.1em;
+}
+
+form div button {
+    font-size: 1.3em;
+    padding: 0.321em;
+    margin: 0.2em;
+    width: 45%;
+    border-radius: 0.51em;
+    background: #34495e;
+    color: white;
+    text-transform: uppercase;
+}
+
+form button#reset {
+    float: left;
+}
+
+form button#submit {
+    float: right;
+}

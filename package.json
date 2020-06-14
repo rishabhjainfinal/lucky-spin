@@ -1,0 +1,19 @@
+{
+    "name": "jackpot",
+    "version": "1.0.0",
+    "description": "for_all_luck_peoples",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "rishi",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "html": "^1.0.0",
+        "mongoose": "^5.9.16",
+        "nodemon": "^2.0.4",
+        "pug": "^2.0.4"
+    }
+}

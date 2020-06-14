@@ -1,0 +1,31 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title time
+  style
+    include ../public/css/time.css
+section.timer.top
+  h3.hearding_for_time
+    | Time&nbsp;remaining
+    #timer
+      div
+        span#days
+        | &nbsp;Days,
+      div
+        span#hours
+        | &nbsp;Hours,
+      div
+        span#min
+        | &nbsp;min,
+      div
+        span#sec
+        | &nbsp;sec
+footer#footer.footer
+  | @copyright reserved Developed by 
+  strong
+    i RISHI
+
+
+script
+    include ../public/js/time.js

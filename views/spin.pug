@@ -1,0 +1,134 @@
+head
+  title HTML5 Canvas Winning Wheel
+  script
+    include ../public/js/Winwheel.js
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js')
+  script(src='https://kit.fontawesome.com/a076d05399.js')
+  style
+    include ../public/css/main.css
+    include ../public/css/selfspin.css
+section.timer.top
+  h3.hearding_for_time
+    | Time&nbsp;remaining
+    #timer
+      div
+        span#days.timespan
+        | &nbsp;Days
+      div
+        span#hours.timespan
+        | &nbsp;Hours
+      div
+        span#min.timespan
+        | &nbsp;min
+      div
+        span#sec.timespan
+        | &nbsp;sec
+section.spin
+  h1.centerised
+    | welcome 
+    if user
+      span#user.user= user
+    else
+      span#user.user user
+  p.centerised share to get more chances
+  .chances
+    span chances :
+    span#chances 0
+  .sharediv
+    button#share.share
+      i.fas.fa-share-alt
+      | share
+  div(align='center')
+    table(cellpadding='0' cellspacing='0' border='0')
+      button#spin_button spin
+      .power_controls
+        tr
+          td.the_wheel(width='438' height='582' align='center' valign='center')
+            canvas#canvas(width='434' height='434')
+
+//- winner##############################################################
+mixin person(item)
+    .person
+        i.fas.fa-user-alt
+        span= item
+
+section#winners.winners
+  h3 recent winners
+  .winners#listwinner
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+    .person
+      i.fas.fa-user-alt
+      span wainnerNane
+
+
+
+// displayAllPossibleItemsHere
+section#items.items
+  h2.itemdiscription win product
+  .images
+    .item
+      img(src='/static/others/camera.png' alt='camera')
+      span.dis camera
+    .item
+      img(src='/static/others/mobile.jpg' alt='mobile')
+      span.dis mobile
+    .item
+      img(src='/static/others/iphone.png' alt='iphone')
+      span.dis iphone-X
+    .item
+      img(src='/static/others/shoes.jpg' alt='shoes')
+      span.dis shoes
+section#dis.discriptionSection
+  .discription.fullscreen1
+    | DUE TO CORONA VIRUS MANY PEOPLE HAVE LOSES IN BUSSINESS
+  .discription.fullscreen2
+    | SO WE BUY SOME ITEMS FROM THEM AND GIVE THEM FOR FREE
+  .discription.fullscreen3
+    | you get 2 chances by default share to get more chances
+  .discription.fullscreen4
+    | if you provide right information we will send them at your location
+  .discription.fullscreen5
+    | first login to get your prices
+    a(href='/login') click to LOGIN
+section.windisplay
+  .lose
+    img(src='/static/others/lau.png' alt='image-not-found')
+    hr
+    h1 you lose
+    hr
+  .stuff
+    img#winimg(alt='not-found')
+    hr
+    h1
+      | you win 
+      span#winstuff stuff
+    hr
+
+script
+    include ../public/js/time.js
+    include ../public/js/discription.js
+    include ../public/js/spin.js
